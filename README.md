@@ -20,4 +20,25 @@ Tests in : ```spec/chars_in_string_spec.js```
 npm test
 ```
 
+## Array Manipuilation
 
+### Sorted Array Compact
+
+implementation in: ```lib/arrays.js```
+
+Tests in : ```spec/array_compact_spec.js```
+
+```
+npm test
+```
+
+
+### Array Rotation
+
+implementation in: ```lib/arrays.js```
+
+Tests in : ```spec/rotate_array_spec.js```
+
+```
+npm test
+```
