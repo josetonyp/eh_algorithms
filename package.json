@@ -1,0 +1,23 @@
+{
+  "name": "ehealth-algorithms",
+  "version": "1.0.0",
+  "description": "## Tree Traversals Algorithms",
+  "main": "chars_in_string.js",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josetonyp/eh_algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josetonyp/eh_algorithms/issues"
+  },
+  "homepage": "https://github.com/josetonyp/eh_algorithms#readme",
+  "devDependencies": {
+    "chai": "*",
+    "jasmine-node": "*"
+  }
+}
