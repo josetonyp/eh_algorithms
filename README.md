@@ -14,10 +14,10 @@ Implementation of 2 search algorithms for characters in an String.
 
 implementation in: ```lib/find_chars.js```
 
-Tests in : ```spec/chars_in_string_spec.js```
+Tests in : ```spec/lib/chars_in_string_spec.js```
 
 ```
-npm test
+npm run test-lib
 ```
 
 ## Array Manipuilation
@@ -26,10 +26,10 @@ npm test
 
 implementation in: ```lib/arrays.js```
 
-Tests in : ```spec/array_compact_spec.js```
+Tests in : ```spec/lib/array_compact_spec.js```
 
 ```
-npm test
+npm run test-lib
 ```
 
 
@@ -37,10 +37,10 @@ npm test
 
 implementation in: ```lib/arrays.js```
 
-Tests in : ```spec/rotate_array_spec.js```
+Tests in : ```spec/lib/rotate_array_spec.js```
 
 ```
-npm test
+npm run test-lib
 ```
 
 ### Least Common Multiple
@@ -49,9 +49,20 @@ Calculate the LCM of a list of integers using a algorithm by reducing the minimu
 
 implementation in: ```lib/arrays.js```
 
-Tests in : ```spec/lcm_spec.js```
+Tests in : ```spec/lib/lcm_spec.js```
+
+```
+npm run test-lib
+```
+
+### Angular TODO app
+
+Implemeting a simple Angular TODO app with PouhDB and 10 secs synchronization.
+
+implementation in: ```app/todo/*```
+
+Tests in : ```spec/app/*```
 
 ```
 npm test
 ```
-

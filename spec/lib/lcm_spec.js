@@ -1,4 +1,4 @@
-var FArray = require('../lib/arrays.js');
+var FArray = require('../../lib/arrays.js');
 var chai = require("chai");
 var expect = chai.expect;
 

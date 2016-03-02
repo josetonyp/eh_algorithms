@@ -1,4 +1,4 @@
-var FCL = require('../lib/find_chars.js');
+var FCL = require('../../lib/find_chars.js');
 var chai = require("chai");
 var expect = chai.expect;
 
