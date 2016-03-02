@@ -9,29 +9,29 @@ angular.module('myApp', ['ngRoute'])
   });
 }])
 
-.controller('ToDoController', ['$scope', function(scope) {
-
-  var addTodoItem = function(value) {
-    scope.todoItems[(new Date).getTime()] = {
-      value: value,
-      done: false,
-      edit: false
-    };
-  };
-
-  var removeTodoItem = function(id) {
-    console.log(scope.todoItems);
-    console.log(id);
-    scope.todoItems = _.omit(scope.todoItems, id);
-  }
-
-  var toggleDone = function(id) {
-    scope.todoItems[id].done = !scope.todoItems[id].done;
-    console.log(scope.todoItems);
-  }
-
+.controller('ToDoController', ['$scope', 'todoService', function(scope, todoService) {
   scope.todoItems = {};
   scope.todoItem = { value: ""};
+
+  var updateItemsLIst = function(){
+    todoService.all().then(function(rows) {
+      scope.todoItems = _.map(rows, 'doc');
+      scope.$apply();
+    });
+  };
+
+  var addTodoItem = function(value) {
+    todoService.add(value).then(updateItemsLIst);
+  };
+
+  var removeTodoItem = function(id, rev) {
+    todoService.remove(id, rev).then(updateItemsLIst);
+  }
+
+  var toggleDone = function(item) {
+    item.done = !item.done;
+    todoService.update(item).then(updateItemsLIst);
+  };
 
   scope.todoSubmit = function() {
     scope.todoForm.todoItem.$setValidity('todoItem', true);
@@ -44,4 +44,5 @@ angular.module('myApp', ['ngRoute'])
 
   scope.removeTodoItem = removeTodoItem;
   scope.toggleDone = toggleDone;
+  updateItemsLIst();
 }]);

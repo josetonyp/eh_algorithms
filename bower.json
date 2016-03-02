@@ -11,7 +11,9 @@
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
-    "lodash": "~4.6.1"
+    "lodash": "~4.6.1",
+    "angular-pouchdb": "~4.1.0",
+    "pouchdb": "~5.2.1"
   },
   "devDependencies": {
     "bootstrap": "~3.3.6"

@@ -16,13 +16,13 @@
       <div class="row">
         <div class="">
 
-          <div class="input-group" ng-repeat="(id, item) in todoItems">
+          <div class="input-group" ng-repeat="item in todoItems">
             <span ng-class="['input-group-addon', {'bg-success': item.done}]">
-              <input type="checkbox" ng-click="toggleDone(id)" >
+              <input type="checkbox" ng-click="toggleDone(item)" >
             </span>
             <div class="form-control">{{ item.value }}</div>
             <span class="input-group-btn" ng-hide="item.done">
-              <button type="button" class="btn btn-danger" ng-click="removeTodoItem(id)">
+              <button type="button" class="btn btn-danger" ng-click="removeTodoItem(item._id, item._rev)">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
               </button>
             </span>
