@@ -29,6 +29,10 @@ angular.module('myApp')
 
     remove: function(id, rev) {
        return DB.remove(id, rev);
+    },
+
+    sync: function() {
+      return DB.sync('http://localhost:5984/todoDB');
     }
   }
 }]);

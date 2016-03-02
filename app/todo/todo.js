@@ -9,9 +9,13 @@ angular.module('myApp', ['ngRoute'])
   });
 }])
 
-.controller('ToDoController', ['$scope', 'todoService', function(scope, todoService) {
+.controller('ToDoController', ['$scope', 'todoService', '$interval', function(scope, todoService, interval) {
   scope.todoItems = {};
   scope.todoItem = { value: ""};
+
+  interval( function(argument) {
+    todoService.sync();
+  } , 10 * 1000);
 
   var updateItemsLIst = function(){
     todoService.all().then(function(rows) {
