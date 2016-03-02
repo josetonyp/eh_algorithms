@@ -4,8 +4,8 @@
 
 Deep First Traversal
 
-Is an algorithm to traverse a tree by visiting first the child of a node in case of existing instead of the sibling of the current parent's node. By oposition to breath first when the traverse choose is to visit first the the sibling of the current parent's node.
-This algorithm make use of an stack to track the visited nodes and a list to track the output. The algorithm works by adding into the visited node's stack and the output list the current visit node. In the case the node is a leaf the current visited node is remove from the stack and the the current visited node is moved the next in the stack (that will be the parent of this node) and a new child is serch in this revisited node.
+Is an algorithm to traverse a tree by first visiting the child of a node in case of existing instead of the sibling of the current parent's node. By oposition to "Breath First", when the traverse choice is to visit first the sibling of the current parent's node.
+This algorithm makes use of an stack to track the visited nodes and a list to track the output. The algorithm works by adding into the **visited node's stack** and the **output list** the current visited node. In case the current visited node is a *leaf*, this node is removed from the **visited node's stack** and then pointer is moved to the next node of the stack (that will be the parent of this current node) so a new child of this revisited parent node is tagerted to be visited. In case there is no more children to visit the current visited node is remove from the **visited node's stack** and and then pointer is moved to the next node of the stack. The algorithm finish when the stack is empty.
 
 ## Searching for charactern in some strings
 
