@@ -42,3 +42,16 @@ Tests in : ```spec/rotate_array_spec.js```
 ```
 npm test
 ```
+
+### Least Common Multiple
+
+Calculate the LCM of a list of integers using a algorithm by reducing the minimun prime factor of the list until no further reduction is possible.
+
+implementation in: ```lib/arrays.js```
+
+Tests in : ```spec/lcm_spec.js```
+
+```
+npm test
+```
+
